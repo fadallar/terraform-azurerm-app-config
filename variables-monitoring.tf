@@ -24,8 +24,8 @@ variable "diag_log_categories" {
   description = "List of categories to enable in the diagnostic settings"
   type        = list(string)
   default = [
-    "ContainerRegistryRepositoryEvents",
-    "ContainerRegistryLoginEvents"
+    "Audit",
+    "HTTPRequests"
   ]
 
 }
