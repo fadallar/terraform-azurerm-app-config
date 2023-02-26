@@ -71,7 +71,7 @@ variable "identity_ids" {
   default     = []
 }
 
-Variable "public_network_access" {
+variable "public_network_access" {
   description = "The Public Network Access setting of the App Configuration"
   type        = string
   default     = "Disabled"
