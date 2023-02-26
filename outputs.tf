@@ -1,6 +1,6 @@
 output "id" {
   description = "The App Configuration ID"
-  value       = id
+  value       = azurerm_app_configuration.appconf.id
 }
 
 output "endpoint" {
