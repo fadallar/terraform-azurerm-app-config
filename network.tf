@@ -22,5 +22,6 @@ resource "azurerm_private_endpoint" "pep" {
       condition     = var.enable_private_endpoint && (var.private_endpoint_subnet_id != null && var.private_dns_zone_id != null)
       error_message = "private_endpoint_subnet_id and private_dns_zone_id are mandatory when enable private endpoint is true."
     }
+  }
 }
 
