@@ -25,7 +25,7 @@ variable "diag_log_categories" {
   type        = list(string)
   default = [
     "Audit",
-    "HTTPRequests"
+    "HTTPRequest"
   ]
 
 }
