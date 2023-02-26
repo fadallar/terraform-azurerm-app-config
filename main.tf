@@ -14,7 +14,7 @@ resource "azurerm_app_configuration" "appconf" {
   }
 
   dynamic "encryption" {
-    for_each = var.key_vault_key_identifier && var.key_vault_identity_client_id != null ? ["enabled"] : []
+    for_each = var.key_vault_key_identifier != null && var.key_vault_identity_client_id != null ? ["enabled"] : []
     content {
       key_vault_key_identifier = var.key_vault_key_identifier
       identity_client_id       = var.key_vault_identity_client_id
