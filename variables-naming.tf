@@ -5,7 +5,7 @@ variable "custom_name" {
   type        = string
   default     = ""
   validation {
-    condition     = can(regex("^[a-z]([a-z0-9-]*[a-z0-9])?$", var.custom_name))
+    condition     = var.custom_name == "" || can(regex("^[a-z0-9]([a-z0-9-]*[a-z0-9])?$", var.custom_name))
     error_message = "Invalid variable: ${var.custom_name}. Variable name must start with a lowercase letter, end with an alphanumeric lowercase character, and contain only lowercase letters, digits, or a dash (-)."
   }
 }
@@ -15,7 +15,7 @@ variable "workload_info" {
   type        = string
   default     = ""
   validation {
-    condition     = can(regex("^[a-z]([a-z0-9-]*[a-z0-9])?$", var.workload_info))
+    condition     = var.workload_info == "" || can(regex("^[a-z0-9]([a-z0-9-]*[a-z0-9])?$",  var.workload_info))
     error_message = "Invalid variable: ${var.workload_info}. Variable name must start with a lowercase letter, end with an alphanumeric lowercase character, and contain only lowercase letters, digits, or a dash (-)."
   }
 }
