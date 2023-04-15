@@ -32,3 +32,33 @@ output "identity" {
   value       = azurerm_app_configuration.appconf.identity
   description = "An identity block"
 }
+
+output "clientid_apconf_data_reader" {
+  value       = azurerm_user_assigned_identity.apconf_data_reader.client_id
+  description = "Client Id to the user-managed identity with App Config Data Reader"
+}
+
+output "principalid_apconf_data_reader" {
+  value       = azurerm_user_assigned_identity.apconf_data_reader.principal_id
+  description = "Principal Id to the user-managed identity with App Config Data Reader"
+}
+
+output "tenantid_apconf_data_reader" {
+  value       = azurerm_user_assigned_identity.apconf_data_reader.tenant_id
+  description = "Tenant Id to the user-managed identity with App Config Data Reader"
+}
+
+output "clientid_apconf_data_owner" {
+  value       = azurerm_user_assigned_identity.apconf_data_owner.client_id
+  description = "Client Id to the user-managed identity with App Config Data Owner"
+}
+
+output "principalid_apconf_data_owner" {
+  value       = azurerm_user_assigned_identity.apconf_data_owner.principal_id
+  description = "Principal Id to the user-managed identity with App Config Data Owner"
+}
+
+output "tenantid_apconf_data_owner" {
+  value       = azurerm_user_assigned_identity.apconf_data_owner.tenant_id
+  description = "Tenant Id to the user-managed identity with App Config Data Owner"
+}
